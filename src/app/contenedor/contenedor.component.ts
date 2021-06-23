@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-contenedor',
   templateUrl: './contenedor.component.html',
   styleUrls: ['./contenedor.component.css']
 })
-export class ContenedorComponent {
-   names: string[] =['PEPE','JUAN','MARIA'];
-   description: string[] =['hombre','hombre','mujer'];
-  
+export class ContenedorComponent implements OnInit  {
+ 
+  @Input()
+  usuarioCompartir = '';
+  constructor() { }
+
+  ngOnInit() {
+    
+  }
   
 
 }
